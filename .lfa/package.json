@@ -1,0 +1,22 @@
+{
+  "name": "demoday4",
+  "version": "1.0.0",
+  "keywords": [
+    "lfa-book"
+  ],
+  "book": {
+    "title": "Demo Day 4",
+    "language": "en"
+  },
+  "engines": {
+    "lfa": "^0.8.12"
+  },
+  "lfa": {
+    "compileCore": false,
+    "externalPlugins": [
+      "https://plugins.lfwd.io/lfa-core/0.8/plugin",
+      "https://plugins.lfwd.io/lfa-classroom/0.1/plugin",
+      "https://plugins.lfwd.io/lfa-backstage/0.1/plugin"
+    ]
+  }
+}

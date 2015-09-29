@@ -1,0 +1,21 @@
+# LFA build output
+/.lfa/build
+
+# Editor swap files
+*~
+*.sw*
+.backup-*
+
+# OS X resource forks
+._*
+
+# Desktop files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# NPM
+node_modules
+npm-debug.log
+
