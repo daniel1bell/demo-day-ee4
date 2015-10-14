@@ -53,6 +53,7 @@ function setIntroButton() {
 
     function onClick() {
       var newName = prompt();
+      newName = newName || '';
       if (newName.match(/\S+\s+\S+/)) {
         Storage.setItem('investorName', newName);
         setIntroButton();

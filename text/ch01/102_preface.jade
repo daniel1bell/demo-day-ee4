@@ -19,7 +19,7 @@ p Just sit back and enjoy the ride. We'll take it from here.
       var $ = require('jquery');
       var $tb = $('#your-name');
 
-      var name = Storage.getItem('investorName');
+      var name = Storage.getItem('investorName') || '';
 
       if (name) $tb.val(name);
       $tb.parent().removeClass('has-success has-error').addClass(name.match(/\S+\s+\S+/) ? 'has-success' : 'has-error');
