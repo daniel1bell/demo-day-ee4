@@ -4,3 +4,30 @@
 h1 We're in control.
 
 p Just sit back and enjoy the ride. We'll take it from here.
+
+
+.form-group
+  label.control-label(for='your-name') Your name
+  input#your-name.form-control(type='text', placeholder='First Last', title='Thank you for letting us know!')
+  span.help-block Can you write your name here? It might be useful later on.
+
+  script.
+    (function() {
+      var Storage = require('lfa-core').Storage;
+      var $ = require('jquery');
+      var $tb = $('#your-name');
+
+      var name = Storage.getItem('investorName');
+
+      if (name) $tb.val(name);
+      $tb.parent().removeClass('has-success has-error').addClass(name.match(/\S+\s+\S+/) ? 'has-success' : 'has-error');
+
+      function onChange() {
+        name = $tb.val();
+        /* $tb.removeClass() ? */
+        $tb.parent().removeClass('has-success has-error').addClass(name.match(/\S+\s+\S+/) ? 'has-success' : 'has-error');
+        Storage.setItem('investorName', name);
+      }
+
+      $tb.focus().unbind("keyup", onChange).on("keyup", onChange);
+     })();
